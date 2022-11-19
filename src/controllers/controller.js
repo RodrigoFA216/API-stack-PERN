@@ -2,24 +2,14 @@
 const pool = require('../db');
 
 const bienvenida = (req, res) => {
-    res.send('Esta será la página de bienvenida hahahahha');
+    res.send('Este es un ejemplo de envío desde el backend de una respuesta normal');
 };
 
-const login = (req, res) => {
-    res.send('Esta será la página de bienvenida hahahahha');
-}
-
-const signin = (req, res) => {
-    res.send('Página de registro');
-}
-
-const content = (req, res) => {
-    res.send('página de contenido principal');
-}
-
-const about = (req, res) => {
-    res.send('no se que poner acá hshshs');
-}
+const jsontest = (req, res) => {
+    res.json({
+        propiedad: 'Este es un ejemplo de un envío de un objeto json desde el backend'
+    });
+};
 
 //CRUD CREATE READ UPDATE DELETE
 
@@ -67,7 +57,8 @@ const createElement = async (req, res, next) => {
         descripcion
     } = req.body;
 
-    //console.log(title, descripcion); // muestra lo quenos manda el body en la consola express validator o joi para validar objetos json
+    //console.log(title, descripcion); 
+    // muestra lo quenos manda el body en la consola se puede usar express validator o joi para validar objetos json
 
     try {
 
@@ -81,8 +72,6 @@ const createElement = async (req, res, next) => {
         //     error: error.message
         // });
     }
-
-    //res.send('creando un elemento para la lista');
 }
 
 //-----------------DELETE-----------------
@@ -140,10 +129,7 @@ const updateElement = async (req, res, next) => {
 
 module.exports = {
     bienvenida,
-    login,
-    signin,
-    content,
-    about,
+    jsontest,
     getAllElements,
     getSingleElement,
     createElement,

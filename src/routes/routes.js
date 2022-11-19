@@ -9,10 +9,7 @@ const pool = require('../db'); //conexión con la base de datos
 //funciones de control que vienen de root/src/controllers/controller que contiene funciones de respuesta al enrutamiento
 const {
     bienvenida,
-    login,
-    signin,
-    content,
-    about,
+    jsontest,
     getAllElements,
     getSingleElement,
     createElement,
@@ -23,13 +20,7 @@ const {
 //router, por metodo get en la dirección localhost:3000/ regresa la función bienvenida que está en controller.js
 router.get('/', bienvenida);
 
-router.get('/login', login);
-
-router.get('/signin', signin);
-
-router.get('/content', content);
-
-router.get('/about', about);
+router.get('/jsontest', jsontest);
 
 //CRUD CREATE READ UPDATE DELETE
 

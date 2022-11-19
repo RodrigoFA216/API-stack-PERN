@@ -32,6 +32,22 @@
 ~~~
 >npm run dev
 ~~~
+Crea en la carpeta raíz un archivo de nombre .env que contenga los siguientes datos:
+
+~~~
+  DB_USER = <>
+  DB_PASSWORD = <>
+  DB_HOST = <>
+  DB_PORT = <>
+  DB_DATABASE = <>
+~~~
+Reemplazando las <> por:
+
+Usuario de la base de datos
+Password del usuario
+Host donde está dicha conexión
+Puerto de la conexión
+Base de datos a utilizar
 
 
 # Configuración del Back End
