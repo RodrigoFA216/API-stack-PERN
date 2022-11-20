@@ -2,13 +2,7 @@
 const pool = require('../db');
 
 const bienvenida = (req, res) => {
-    res.send('Este es un ejemplo de envío desde el backend de una respuesta normal');
-};
-
-const jsontest = (req, res) => {
-    res.json({
-        propiedad: 'Este es un ejemplo de un envío de un objeto json desde el backend'
-    });
+    res.send('Este es un ejemplo de envío desde el backend de una respuesta en texto plano');
 };
 
 //CRUD CREATE READ UPDATE DELETE
@@ -129,7 +123,6 @@ const updateElement = async (req, res, next) => {
 
 module.exports = {
     bienvenida,
-    jsontest,
     getAllElements,
     getSingleElement,
     createElement,

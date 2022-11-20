@@ -8,9 +8,10 @@ const Routes = require ('./routes/routes');//requerimos lo que envíe el archivo
 const app = express();
 //Configuraciones locales
 app.use(cors());
-app.use(morgan('dev'));//peticiones por consola
-app.use(express.json());//hecho para que express entienda json
+app.use(morgan('dev'));//peticiones HTTP por consola
+app.use(express.json());//Para que express entienda json
 app.use(Routes);//usamos lo que tenga rutas
+//Definimos una función next que va a recibir un error y va a regresar un json con un mensaje del error
 app.use((err,req,res,next)=>{
     return res.json({
         message: err.message
